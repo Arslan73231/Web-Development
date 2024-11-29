@@ -350,26 +350,26 @@ nav ul li a:hover::after {
 
 .btn.btn2 {
   display: inline-block;
-  background: #ff004f; /* Pink color */
-  color: #fff; /* Text color */
+  background: #ff004f; 
+  color: #fff; 
   text-decoration: none;
-  padding: 10px 30px; /* Padding for space inside the button */
+  padding: 10px 30px; 
   font-size: 16px;
   border: none;
-  border-radius: 8px; /* Rounded corners */
-  margin-top: 10px; /* Space between the button and the icons */
+  border-radius: 8px; 
+  margin-top: 10px; 
   cursor: pointer;
   text-align: center;
-  transition: background 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+  transition: background 0.3s ease, transform 0.2s ease; 
 }
 
 .btn.btn2:hover {
-  background: #ff004f; /* Darker pink on hover */
-  transform: scale(1.05); /* Slight zoom-in effect */
+  background: #ff004f; 
+  transform: scale(1.05); 
 }
 
 .btn.btn2:active {
-  transform: scale(0.95); /* Slight shrink effect when clicked */
+  transform: scale(0.95); 
 }
 
 input,
