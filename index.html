@@ -1,238 +1,427 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website - DevSphere</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/98004c765a.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <div id="header">
-      <div class="container">
-        <nav class="nav">
-          <img src="Images/logo.png" alt="Logo" class="logo" />
-          <ul>
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-           
-          </ul>
-         
-        </nav>
-        
-        <div class="header-text">
-          <p>Web Developer</p>
-          <h1>
-            Hi, I am <span>Arslan Rashid</span> <br />
-            from Pakistan
-          </h1>
-        </div>
-      </div>
-    </div>
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #080808;
+  color: #fff;
+}
 
-    <!-----------------About------------->
+#header {
+  width: 100%;
+  height: 110vh; 
+  background-image: url(Images/pppic.png);
+  background-size: auto 80%;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
 
-    <div id="about">
-      <div class="container">
-        <div class="row">
-          <div class="about-col-1">
-            <img src="Images/profile pic.png" alt="aboutme_img"  height="500px"/>
-          </div>
-          <div class="about-col-2">
-            <h1 class="sub-title">About Me</h1>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores,
-              officiis illo! Laborum excepturi sapiente cupiditate aut nostrum
-              minima voluptate vero voluptates ab dolor. Porro dicta dignissimos
-              nobis molestiae ad laudantium.lorem20
-            </p>
-            <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-              <p class="tab-links" onclick="opentab('experience')">Experience </p>
-              <p class="tab-links" onclick="opentab('education')">Education</p>
-            </div>
-            <div class="tab-titles">
-            <div class="tab-contents active-tab" id="skills">
-            <ul>
-                <li><span style="color:#d66c51 ;">UI/UX<span><br>Designing Web/App Interferences</li>
-                <li><span style="color:#d66c51 ;">Web Development<span><br>Web App Development</li>
-                <li><span style="color:#d66c51"> App Development <span><br>Building Web/App Interferences</li>
-            </ul>
-            </div>
+.container {
+  padding: 10px 10%;
+}
 
-            <div class="tab-contents" id="experience">
-                <ul>
-                    <li><span style="color:#d66c51 ;">2019-2020<span><br>Designing Web/App At Dankash</li>
-                    <li><span style="color:#d66c51 ;">2017-2018<span><br>Intern at Flexjob</li>
-                    <li><span style="color:#d66c51"> 2016-2024 <span><br>Tam lead at Mis-kills</li>
-                </ul>
-                </div>
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
-                <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span style="color:#d66c51 ;">2017<span><br>Design at Dankash</li>
-                        <li><span style="color:#d66c51 ;">2019<span><br>Bechelor from Nuces Isd</li>
-                        <li><span style="color:#d66c51"> 2021<span><br>Master from Islamabad</li>
-                    </ul>
-                    </div>
-          </div>
-        </div>
-      </div>
-    </div>
+.logo {
+  width: 140px;
+}
 
-    <!----------------services--------------->
+nav ul {
+  display: flex;
+  list-style: none;
+}
 
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ab. Impedit ut dolore 
-                    aut sunt molestiae, voluptatem assumenda temporibus molestias eos sequi maxime at,
-                    nihil eaque nulla soluta dignissimos nam.</p>
-                    <a href="#">Learn more</a>
-                </div>
+nav ul li {
+  margin: 10px 20px;
+}
 
-                <div>
-                    <i class="fa-solid fa-crop"></i>
-                    <h2>UI/UX Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ab. Impedit ut dolore 
-                    aut sunt molestiae, voluptatem assumenda temporibus molestias eos sequi maxime at,
-                    nihil eaque nulla soluta dignissimos nam.</p>
-                    <a href="#">Learn more</a>
-                </div>
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
 
-                <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>App Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ab. Impedit ut dolore 
-                    aut sunt molestiae, voluptatem assumenda temporibus molestias eos sequi maxime at,
-                    nihil eaque nulla soluta dignissimos nam.</p>
-                    <a href="#">Learn more</a>
-                </div>
-            </div>
-        </div>
-    </div>
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.header-text {
+  margin-top: 20%;
+  text-align: left;
+}
+
+.header-text p {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.header-text h1 {
+  font-size: 60px;
+}
+
+.header-text h1 span {
+  color: #ff004f;
+}
+
+/* <!-----------------About------------- >  */
+
+#about {
+  padding: 80px ;
+  color: #fff;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+
+.about-col-1 {
+  flex-basis: 35%;
+  background-color: #131313;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-col-1 img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
 
 
-    <!-- -----------Portfoio------------------ -->
-    <div id="portfolio">
-        <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
 
-            <div class="work">
-                <img src="Images/img1.jpg">
-                <div class="layer">
-                <h3>Social Media App</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, quae?</p>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              </div>
-            </div>
+.about-col-2 {
+  flex-basis: 60%;
+}
 
-            <div class="work">
-                <img src="Images/img2.jpg">
-                <div class="layer">
-                  <h3>Music App</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, quae?</p>
-                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-            
-            <div class="work">
-                <img src="Images/img3.jpg">
-                <div class="layer">
-                  <h3>Online Shopping App</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, quae?</p>
-                  <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-            </div>
-        </div>
-        <a href="#" class="btn">See more</a>
-     </div>
-    </div>
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background-color: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+
+}
+
+.tab-contents ul li span{
+    color: #ffff;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* ------------------services------------------ */
+
+#service{
+    padding: 30px 0;
+
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div{
+    background: #131313;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY((-10px));
+}
+
+/* }-----------portfolio------------- */
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.work {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.work img {
+  width: 100%; /* Ensures the image takes up the full width of the container */
+  height: auto; /* Adjusts the height based on the width to maintain aspect ratio */
+  max-height: 400px; /* Limits the height to prevent images from becoming too large */
+  object-fit: cover; /* Ensures the image covers the space without distortion, crops if necessary */
+  object-position: center; /* Centers the image within the container */
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.layer a {
+  margin-top: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.work:hover img {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.work:hover .layer {
+  height: 100%;
+}
+
+#extra-content .work img {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Matching the max height of the original images */
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
 
 
-<!-- -------------------contact-------------------- -->
-    
-<div id="contact">
-  <div class="container">
-    <div class="row">
-      <div class="contact-left">
-        <h1 class="sub-title">Contact Me</h1>
-        <p> <i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
-        <p> <i class="fa-solid fa-phone-volume"></i>0123456789</p>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/profile.php?id=100076510726539"><i class="fa-brands fa-facebook"></i></a>
-          <a href="https://www.tiktok.com/@arslan73231"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="https://www.instagram.com/arslan73231/"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/in/arslan-rashid-626a75325/"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-        <a href="Images/my cv.pdf " download class="btn btn2">Download CV</a>
-      </div>
-      <div class="contact-right">
-        <form name="submit-to-google-sheet">
-          <input type="text"name="Name" placeholder="Your Name " required >      
-          <input type="email"name="Email" placeholder="Your Email" required >   
-          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>  
-          <button type="submit" class="btn btn2">Submit</button> 
-         </form>
-         <span id="msg"></span>
-      </div>
-    </div>
-  </div>
-  <div class="copyright">
-    <p>copyright © Kelvin. Made with DevSphere</p>
-  </div>
-</div>
 
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-    
-        function opentab(tabname) {
-           
-            for (var tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-         
-            for (var tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-         
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycby2mErr7nLaYq0Aec2dgbVUjs71UXQaYO1dxqDjHe7wAZE47SI31aLx1UMzLMAxi8p_-A/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg = document.getElementById("msg")
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-
-    
-    msg.innerHTML = "Message sent successfully"
-
-    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-      .then(response => {
-        setTimeout(function(){
-          msg.innerHTML = ""
-        }, 2000)
-        form.reset()
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
+/* ---------------------------contact----------------------- */
 
 
-    
-  </body>
-</html>
+.contact-left{
+  flex-basis: 35%;
+}
+
+
+.contact-right{
+  flex-basis: 60%;
+}
+
+.contact-left p{
+  margin-top: 30px;
+}
+
+.contact-left p i{
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social-icons{
+  margin-top: 30px;
+}
+
+.social-icons a{
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #fff;
+  display: inline-block;
+  transform: translate 0.5s;
+}
+
+.social-icons a:hover{
+  color: #ff004f;
+  transform: translateY((-5px));
+  transform: transform 0.5s;
+}
+
+.btn.btn2 {
+  display: inline-block;
+  background: #ff004f; /* Pink color */
+  color: #fff; /* Text color */
+  text-decoration: none;
+  padding: 10px 30px; /* Padding for space inside the button */
+  font-size: 16px;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  margin-top: 10px; /* Space between the button and the icons */
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+.btn.btn2:hover {
+  background: #ff004f; /* Darker pink on hover */
+  transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+.btn.btn2:active {
+  transform: scale(0.95); /* Slight shrink effect when clicked */
+}
+
+input,
+textarea {
+  color: white;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #fff; 
+ 
+}
+
+.contact-right form{
+  width: 100%;
+}
+
+form input, form textarea{
+  width: 100%;
+  border: 0;
+  outline: none;
+  background:#131313;
+  padding: 15px ;
+  margin: 15px 0;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+form .btn2{
+  padding: 14px 60px;
+  display: inline-block;
+  font-size: 18px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.copyright{
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #131313;
+  color: #fff;
+  font-weight: 300;
+  margin-top: 65px;
+  position: absolute; 
+  
+}
+
+#msg{
+  color: #61b752;
+  margin-top: 8px;
+  display: block;
+}
+
+
+
+
