@@ -1,427 +1,297 @@
-*{
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
-}
-html{
-  scroll-behavior: smooth;
-}
-body {
-  background-color: #080808;
-  color: #fff;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website - DevSphere</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/98004c765a.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav class="nav">
+          <img src="Images/logo.png" alt="Logo" class="logo" />
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+           
+          </ul>
+         
+        </nav>
+        
+        <div class="header-text">
+          <p>Graphic Designer</p>
+          <h1>
+            Hi, I am <span>Arslan Rashid</span> <br />
+            from Pakistan
+          </h1>
+        </div>
+      </div>
+    </div>
 
-#header {
-  width: 100%;
-  height: 110vh; 
-  background-image: url(Images/pppic.png);
-  background-size: auto 80%;
-  background-repeat: no-repeat;
-  background-position: right center;
-}
+    <!-----------------About------------->
 
-.container {
-  padding: 10px 10%;
-}
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="Images/profile pic.png" alt="aboutme_img"  height="500px"/>
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I'm Arslan Rashid, a graphic designer with 3+ years of experience. I specialize in logos, social media posts, flyers,
+               business cards, letterheads, 2D vector tracing, and icons. Let's create designs that resonate with your brand and audience
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-titles">
+            <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span style="color:#ff004f ;">UI/UX Design<span><br>Designing User Interfaces & Experiences</li>
+                <li><span style="color:#ff004f ;">Graphic Design<span><br>Creating Visuals for Digital & Print Media</li>
+                <li><span style="color:#ff004f ;">Illustration<span><br>Crafting Custom Illustrations & Icons</li>
+                
+                
+            </ul>
+            </div>
 
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+            <div class="tab-contents" id="experience">
+                <ul>
+                  <li><span style="color:#ff004f ;">On Fiverr since sep 2023<span><br>Freelance Graphic Designer</li>
+                    <li><span style="color:#ff004f ;">Graphic Designer at Dankash<span><br>Designing Web/App Interfaces</li>
+                    <li><span style="color:#ff004f ;">2023-2024<span><br>Lead Icon Designer at Nimbus Graphics</li>
+                    
+                </ul>
+                </div>
 
-.logo {
-  width: 140px;
-}
+                <div class="tab-contents" id="education">
+                    <ul>
+                      <li><span style="color:#ff004f ;">Graduated 2022<span><br>Fsc Pre-Engineering</li>
+                        <li><span style="color:#ff004f ;">2024-2028<span><br>Bachelor in BSCS from NUCES FAST KHI</li>
+                        <li><span style="color:#ff004f ;">2022<span><br>Design at Dankash</li>
+                        
+                        
+                    </ul>
+                    </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-nav ul {
-  display: flex;
-  list-style: none;
-}
+    <!----------------services--------------->
 
-nav ul li {
-  margin: 10px 20px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  position: relative;
-}
-
-nav ul li a::after {
-  content: "";
-  width: 0;
-  height: 3px;
-  background-color: #ff004f;
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  transition: 0.5s;
-}
-
-nav ul li a:hover::after {
-  width: 100%;
-}
-
-.header-text {
-  margin-top: 20%;
-  text-align: left;
-}
-
-.header-text p {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.header-text h1 {
-  font-size: 60px;
-}
-
-.header-text h1 span {
-  color: #ff004f;
-}
-
-/* <!-----------------About------------- >  */
-
-#about {
-  padding: 80px ;
-  color: #fff;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+    <div id="services">
+      <div class="container">
+          <h1 class="sub-title">My Services</h1>
+          <div class="services-list">
+              <div>
+                  <i class="fa-solid fa-paintbrush"></i>
+                  <h2>Logo Design</h2>
+                  <p>I've honed my craft in creating visually compelling logos that capture the essence of your brand, ensuring it leaves a lasting impression.</p>
+                  <a href="#">Learn more</a>
+              </div>
   
-}
-
-.about-col-1 {
-  flex-basis: 35%;
-  background-color: #131313;
-  border-radius: 10px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.about-col-1 img {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  object-fit: cover;
-}
-
-
-
-.about-col-2 {
-  flex-basis: 60%;
-}
-
-.sub-title {
-  font-size: 60px;
-  font-weight: 600;
-  color: #fff;
-}
-
-.tab-titles {
-  display: flex;
-  margin: 20px 0 40px;
-}
-
-.tab-links {
-  margin-right: 50px;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-  position: relative;
-}
-
-.tab-links::after {
-  content: '';
-  width: 0;
-  height: 3px;
-  background-color: #ff004f;
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  transition: 0.5s;
-}
-
-.tab-links.active-link::after {
-  width: 50%;
-}
-
-.tab-contents ul li{
-    list-style: none;
-    margin: 10px 0;
-
-}
-
-.tab-contents ul li span{
-    color: #ffff;
-    font-size: 14px;
-}
-
-.tab-contents{
-    display: none;
-}
-
-.tab-contents.active-tab{
-    display: block;
-}
-
-/* ------------------services------------------ */
-
-#service{
-    padding: 30px 0;
-
-}
-
-.services-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-
-.services-list div{
-    background: #131313;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
-}
-.services-list div i{
-    font-size: 50px;
-    margin-bottom: 30px;
-}
-
-.services-list div h2{
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
-
-}
-
-.services-list div a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.services-list div:hover{
-    background: #ff004f;
-    transform: translateY((-10px));
-}
-
-/* }-----------portfolio------------- */
-
-.work-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 40px;
-  margin-top: 50px;
-}
-
-.work {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.work img {
-  width: 100%; /* Ensures the image takes up the full width of the container */
-  height: auto; /* Adjusts the height based on the width to maintain aspect ratio */
-  max-height: 400px; /* Limits the height to prevent images from becoming too large */
-  object-fit: cover; /* Ensures the image covers the space without distortion, crops if necessary */
-  object-position: center; /* Centers the image within the container */
-  border-radius: 10px;
-  display: block;
-  transition: transform 0.5s;
-}
-
-.layer {
-  width: 100%;
-  height: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
-  border-radius: 10px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0 40px;
-  text-align: center;
-  font-size: 14px;
-  transition: height 0.5s;
-}
-
-.layer h3 {
-  font-weight: 500;
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-.layer a {
-  margin-top: 20px;
-  color: #ff004f;
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 60px;
-  background: #fff;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  text-align: center;
-}
-
-.work:hover img {
-  transform: scale(1.05); /* Slight zoom effect */
-}
-
-.work:hover .layer {
-  height: 100%;
-}
-
-#extra-content .work img {
-  width: 100%;
-  height: auto;
-  max-height: 400px; /* Matching the max height of the original images */
-  object-fit: cover;
-  object-position: center;
-  border-radius: 10px;
-  display: block;
-  transition: transform 0.5s;
-}
-
-
-
-/* ---------------------------contact----------------------- */
-
-
-.contact-left{
-  flex-basis: 35%;
-}
-
-
-.contact-right{
-  flex-basis: 60%;
-}
-
-.contact-left p{
-  margin-top: 30px;
-}
-
-.contact-left p i{
-  color: #ff004f;
-  margin-right: 15px;
-  font-size: 25px;
-}
-
-.social-icons{
-  margin-top: 30px;
-}
-
-.social-icons a{
-  text-decoration: none;
-  font-size: 30px;
-  margin-right: 15px;
-  color: #fff;
-  display: inline-block;
-  transform: translate 0.5s;
-}
-
-.social-icons a:hover{
-  color: #ff004f;
-  transform: translateY((-5px));
-  transform: transform 0.5s;
-}
-
-.btn.btn2 {
-  display: inline-block;
-  background: #ff004f; /* Pink color */
-  color: #fff; /* Text color */
-  text-decoration: none;
-  padding: 10px 30px; /* Padding for space inside the button */
-  font-size: 16px;
-  border: none;
-  border-radius: 8px; /* Rounded corners */
-  margin-top: 10px; /* Space between the button and the icons */
-  cursor: pointer;
-  text-align: center;
-  transition: background 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
-}
-
-.btn.btn2:hover {
-  background: #ff004f; /* Darker pink on hover */
-  transform: scale(1.05); /* Slight zoom-in effect */
-}
-
-.btn.btn2:active {
-  transform: scale(0.95); /* Slight shrink effect when clicked */
-}
-
-input,
-textarea {
-  color: white;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #fff; 
- 
-}
-
-.contact-right form{
-  width: 100%;
-}
-
-form input, form textarea{
-  width: 100%;
-  border: 0;
-  outline: none;
-  background:#131313;
-  padding: 15px ;
-  margin: 15px 0;
-  font-size: 18px;
-  border-radius: 6px;
-}
-
-form .btn2{
-  padding: 14px 60px;
-  display: inline-block;
-  font-size: 18px;
-  margin-top: 30px;
-  cursor: pointer;
-}
-
-.copyright{
-  width: 100%;
-  text-align: center;
-  padding: 25px 0;
-  background: #131313;
-  color: #fff;
-  font-weight: 300;
-  margin-top: 65px;
-  position: absolute; 
+              <div>
+                  <i class="fa-solid fa-photo-video"></i>
+                  <h2>Social Media Posts</h2>
+                  <p>Crafting engaging and visually appealing social media posts that resonate with your audience and elevate your brand's online presence.</p>
+                  <a href="#">Learn more</a>
+              </div>
   
+              <div>
+                  <i class="fa-solid fa-file-signature"></i>
+                  <h2>Business Cards & Letterheads</h2>
+                  <p>Designing professional business cards and elegant letterheads that communicate your brand identity with sophistication and style.</p>
+                  <a href="#">Learn more</a>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+
+
+    <!-- -----------Portfoio------------------ -->
+
+    <div id="portfolio">
+      <div class="container">
+          <h1 class="sub-title">My Work</h1>
+          <div class="work-list">
+  
+              <!-- Social Media Posts -->
+              <div class="work">
+                  <img src="Images/post.jpg">
+                  <div class="layer">
+                      <h3>Engaging Social Media Posts</h3>
+                      <p>Crafting engaging social media posts to enhance brand visibility and interaction.</p>
+                      <a href="javascript:void(0);" id="social-media-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                  </div>
+              </div>
+  
+              <!-- Logo Designs -->
+              <div class="work">
+                  <img src="Images/logoo.jpg">
+                  <div class="layer">
+                      <h3>Compelling Logo Designs</h3>
+                      <p>Crafting unique and visually striking logos that capture your brand's essence.</p>
+                      <a href="javascript:void(0);" id="logo-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                  </div>
+              </div>
+  
+              <!-- Business Cards -->
+              <div class="work">
+                  <img src="Images/card.jpg">
+                  <div class="layer">
+                      <h3>Eye-Catching Business Cards</h3>
+                      <p>Designing flyers and business cards that leave a lasting impression.</p>
+                      <a href="javascript:void(0);" id="business-card-link"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Placeholder for displaying additional images -->
+          <div id="extra-content" class="work-list"></div>
+      </div>
+  </div>
+  
+<!-- -------------------contact-------------------- -->
+    
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p> <i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
+        <p> <i class="fa-solid fa-phone-volume"></i>0123456789</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100076510726539"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.tiktok.com/@arslan73231"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://www.instagram.com/arslan73231/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/arslan-rashid-626a75325/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+       <a href="" class="btn btn2">Download Cv </a>
+      </div>
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text"name="Name" placeholder="Your Name " required >      
+          <input type="email"name="Email" placeholder="Your Email" required >   
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>  
+          <button type="submit" class="btn btn2">Submit</button> 
+         </form>
+         <span id="msg"></span>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">Copyright ©  Kevin. Made with by DevSphere</p>
+  </div>
+</div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname) {
+           
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+         
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+         
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycby2mErr7nLaYq0Aec2dgbVUjs71UXQaYO1dxqDjHe7wAZE47SI31aLx1UMzLMAxi8p_-A/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+
+    
+    msg.innerHTML = "Message sent successfully"
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        setTimeout(function(){
+          msg.innerHTML = ""
+        }, 2000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+<script>
+// Data for additional images
+const extraImages = {
+    socialMedia: [
+        { src: "Images/p1.jpg", title: "Social Post 1" },
+        { src: "Images/p2.jpg", title: "Social Post 2" },
+    ],
+    logos: [
+        { src: "Images/L1.jpg", title: "Logo 1" },
+        { src: "Images/L2.jpg", title: "Logo 2" },
+    ],
+    businessCards: [
+        { src: "Images/BC1.jpg", title: "Business Card 1" },
+        { src: "Images/BC2.jpg", title: "Business Card 2" },
+    ],
+};
+
+// Function to display additional images and scroll to them
+function displayExtraImages(category) {
+    const extraContent = document.getElementById("extra-content");
+    extraContent.innerHTML = ""; // Clear previous content
+
+    extraImages[category].forEach((item) => {
+        const workDiv = document.createElement("div");
+        workDiv.classList.add("work");
+
+        const img = document.createElement("img");
+        img.src = item.src;
+
+        const layerDiv = document.createElement("div");
+        layerDiv.classList.add("layer");
+
+        const h3 = document.createElement("h3");
+        h3.textContent = item.title;
+
+        layerDiv.appendChild(h3);
+        workDiv.appendChild(img);
+        workDiv.appendChild(layerDiv);
+
+        extraContent.appendChild(workDiv);
+    });
+
+    // Scroll to the extra content
+    extraContent.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-#msg{
-  color: #61b752;
-  margin-top: 8px;
-  display: block;
-}
+// Event listeners for link clicks
+document.getElementById("social-media-link").addEventListener("click", () => {
+    displayExtraImages("socialMedia");
+});
 
+document.getElementById("logo-link").addEventListener("click", () => {
+    displayExtraImages("logos");
+});
 
-
-
+document.getElementById("business-card-link").addEventListener("click", () => {
+    displayExtraImages("businessCards");
+});
+</script> 
+  </body>
+</html>
