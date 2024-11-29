@@ -6,6 +6,7 @@
 }
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body {
   background-color: #080808;
@@ -33,7 +34,7 @@ body {
 }
 
 .logo {
-  width: 140px;
+  width: 160px;
 }
 
 nav ul {
@@ -70,6 +71,7 @@ nav ul li a:hover::after {
 .header-text {
   margin-top: 20%;
   text-align: left;
+  margin-left: 2.86rem;
 }
 
 .header-text p {
